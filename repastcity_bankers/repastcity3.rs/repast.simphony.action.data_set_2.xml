@@ -1,0 +1,55 @@
+<repast.simphony.data2.engine.DataSetDescriptor>
+  <name>SEIR</name>
+  <type>AGGREGATE</type>
+  <inclTick>true</inclTick>
+  <inclBatchRun>false</inclBatchRun>
+  <inclRandomSeed>false</inclRandomSeed>
+  <scheduleParams>
+    <start>1.0</start>
+    <interval>1.0</interval>
+    <priority>-Infinity</priority>
+    <duration>-1.0</duration>
+    <frequency>REPEAT</frequency>
+  </scheduleParams>
+  <methodDataSources class="linked-hash-map">
+    <entry>
+      <string>S</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>S</id>
+        <className>repastcity3.agent.DefaultAgent</className>
+        <methodName>isSuceptible</methodName>
+        <aggType>SUM</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>E</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>E</id>
+        <className>repastcity3.agent.DefaultAgent</className>
+        <methodName>isExposed</methodName>
+        <aggType>SUM</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>I</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>I</id>
+        <className>repastcity3.agent.DefaultAgent</className>
+        <methodName>isInfected</methodName>
+        <aggType>SUM</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+    <entry>
+      <string>R</string>
+      <repast.simphony.data2.engine.MethodDataSourceDefinition>
+        <id>R</id>
+        <className>repastcity3.agent.DefaultAgent</className>
+        <methodName>isCured</methodName>
+        <aggType>SUM</aggType>
+      </repast.simphony.data2.engine.MethodDataSourceDefinition>
+    </entry>
+  </methodDataSources>
+  <countSources class="linked-hash-map"/>
+  <customNADataSources class="linked-hash-map"/>
+  <customAggDataSources class="linked-hash-map"/>
+</repast.simphony.data2.engine.DataSetDescriptor>
